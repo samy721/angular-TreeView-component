@@ -12,7 +12,7 @@
           </td>
         </tr>
         
-        <ejs-treeview id="multiselect" [fields]='field' 
+        <ejs-treeview #tree id="multiselect" [fields]='field' 
         [allowEditing]='allowEditing' (nodeEditing)='editing($event)'
         cssClass="custom-treeview" [allowMultiSelection]='allowMultiSelection'>
             <ng-template #nodeTemplate=""  let-data=>
@@ -33,7 +33,7 @@
          <tr>
              <td>
                  <div class="d-flex justify-content-center align-items-center" style="padding:10px">
-                     <button class="btn btn-outline-dark me-3" style="font-size:15px">+ Add Row</button>
+                     <button (click)="addRow($event)" class="btn btn-outline-dark me-3" style="font-size:15px">+ Add Row</button>
                 </div>
                  
              </td>
