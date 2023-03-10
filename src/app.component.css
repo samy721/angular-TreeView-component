@@ -1,0 +1,74 @@
+table {
+  border-collapse: collapse;
+}
+p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+tr,
+td {
+  box-shadow: 0 0 1px 0 rgb(0, 0, 0);
+  padding-left: 10px;
+}
+.flex {
+  display: flex;
+}
+.just-cont-space-btwn {
+  justify-content: space-between;
+}
+.align-items-center {
+  align-items: center;
+}
+.context-menu {
+  display: flex;
+  width: auto;
+  background: white;
+  border-radius: 5px;
+  padding: 0;
+  box-shadow: 0 0 1px 0 rgb(0 0 0 / 40%);
+}
+.context-menu .item {
+  padding: 4px 5px;
+  font-size: 15px;
+  color: black;
+  cursor: pointer;
+  border-radius: inherit;
+  transition: all 0.25s ease;
+}
+.context-menu .item:hover {
+  background: #343434;
+  color: white;
+}
+.d-flex {
+  display: flex;
+}
+.align-items-center {
+  align-items: center;
+}
+.justify-content-space-between {
+  justify-content: space-around;
+}
+.gap-15 {
+  gap: 15px;
+}
+.m-none {
+  margin: 0;
+}
+.custom-treeview {
+  max-height: 500px;
+  overflow: auto;
+}
+.custom-treeview.e-treeview .e-list-text {
+  width: 90%;
+}
+.custom-treeview.e-treeview .text-container {
+  float: left;
+}
+.custom-treeview.e-treeview .count-container {
+  float: right;
+}
+.custom-treeview,
+.e-fullrow {
+  box-shadow: 0 0 1px 0 rgb(0, 0, 0);
+  padding-left: 10px;
+}

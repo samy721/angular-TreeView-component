@@ -1,0 +1,53 @@
+<div style="margin-top:50px">
+    <table
+      style="width:90%;margin-left:auto;margin-right:auto;margin-bottom:50px;"
+    >
+      <tbody>
+        <tr>
+          <td>
+            <div style="padding:10px 5px" class="flex just-cont-space-btwn align-items-center">
+              <h2>Structure</h2>
+              <h2 style="margin-right:7.5%">Count</h2>
+            </div>
+          </td>
+        </tr>
+        
+        <ejs-treeview id="multiselect" [fields]='field' 
+        [allowEditing]='allowEditing' (nodeEditing)='editing($event)'
+        cssClass="custom-treeview" [allowMultiSelection]='allowMultiSelection'>
+            <ng-template #nodeTemplate=""  let-data=>
+                <div>
+                    <div class="text-container">
+                        <span style="font-size:15px">{{data.name}}</span>
+                    </div>
+                </div>
+                  <div>
+                    <div style="margin-top:5px" class="count-container d-flex justify-content-center align-items-center" >
+                        <span *ngIf="data.count != null" [id]="'span'+data.id" (click)="triggerCount($event,data)" class="e-badge e-badge-primary" style="font-size:15px">{{data.count}}</span>
+                        <input *ngIf="data.count == null" type="number" [id]="'field'+data.id" (blur)="changeCount($event,data)"
+                         class="form-control" style="width:50px;height:25px;margin:0;padding:0">
+                    </div>
+                  </div>
+            </ng-template>
+        </ejs-treeview>
+         <tr>
+             <td>
+                 <div class="d-flex justify-content-center align-items-center" style="padding:10px">
+                     <button class="btn btn-outline-dark me-3" style="font-size:15px">+ Add Row</button>
+                </div>
+                 
+             </td>
+         </tr>
+        <tbody>
+    </table>
+  </div>
+  
+
+<style>
+    .control_wrapper {
+        max-width: 500px;
+        margin: auto;
+        border: 1px solid #dddddd;
+        border-radius: 3px;
+    }
+</style>
